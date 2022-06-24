@@ -6,31 +6,37 @@ import Character from "./components/Character";
 function App() {
 
   const [directionFacing, setDirectionFacing] = useState("dm");
+  const [walking, setWalking] = useState(true);
   const controlClicked = (event) => {
-    setDirectionFacing(event.target.value);
-
+    let val = event.target.value;
+    if(val==="toggle-walk") {
+      setWalking(!walking);
+    } else {
+      setDirectionFacing(event.target.value);
+    }
   }
 
   return (
     <div className="App">
-      <h1>Hello World!</h1>
+    <h1>CSS Walking Animation</h1>
       <Character
-      direction={directionFacing}/>
+      direction={directionFacing}
+      walking={walking}/>
       <div className="control-panel">
         <div className="control-row">
-          <button onClick={controlClicked} value="ul">↖</button>
-          <button onClick={controlClicked} value="um">↑</button>
-          <button onClick={controlClicked} value="ur">↗</button>
+          <button onClick={controlClicked} value="northwest">↖</button>
+          <button onClick={controlClicked} value="north">↑</button>
+          <button onClick={controlClicked} value="northeast">↗</button>
         </div>
         <div className="control-row">
-          <button onClick={controlClicked} value="ml">←</button>
-          <button onClick={controlClicked} value="mm">⦿</button>
-          <button onClick={controlClicked} value="mr">→</button>
+          <button onClick={controlClicked} value="west">←</button>
+          <button onClick={controlClicked} value="toggle-walk">⦿</button>
+          <button onClick={controlClicked} value="east">→</button>
         </div>
         <div className="control-row">
-          <button onClick={controlClicked} value="dl">↙</button>
-          <button onClick={controlClicked} value="dm">↓</button>
-          <button onClick={controlClicked} value="dr">↘</button>
+          <button onClick={controlClicked} value="southwest">↙</button>
+          <button onClick={controlClicked} value="south">↓</button>
+          <button onClick={controlClicked} value="southeast">↘</button>
         </div>
       </div>
     </div>

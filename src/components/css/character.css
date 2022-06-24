@@ -4,7 +4,7 @@
 
 .Character-container {
   position: relative;
-  height: calc((var(--pixels) * var(--pixel-size)) + 15px);
+  height: calc((var(--pixels) * var(--pixel-size)) + (7.5px*var(--pixel-size)));
   width: calc(var(--pixels) * var(--pixel-size));
   overflow: hidden;
   margin: 0 auto;
@@ -16,31 +16,41 @@
   left: 0;
 }
 
-.face_right, .mr {
+.character-standing {
+  margin-top: calc(7.5px * var(--pixel-size));
+  margin-left: calc(7.5px * var(--pixel-size));
+  height: calc((var(--pixels) * var(--pixel-size)));
+  width: calc(var(--pixels) * var(--pixel-size) );
+}
+
+.face_right, .east {
   top: 0;
 }
-.face_up, .um {
+.face_up, .north {
   top: calc((-1 * (var(--spritesheet-size)/8) * var(--pixel-size)));
 }
-.face_up_right, .ur {
+.face_up_right, .northeast {
   top: calc((-2 * (var(--spritesheet-size)/8) * var(--pixel-size)));
 }
-.face_up_left, .ul {
+.face_up_left, .northwest {
   top: calc((-3 * (var(--spritesheet-size)/8) * var(--pixel-size)));
 }
-.face_down, .dm {
+.face_down, .south {
   top: calc((-4 * (var(--spritesheet-size)/8) * var(--pixel-size)));
 }
-.face_down_right, .dr {
+.face_down_right, .southeast {
   top: calc((-5 * (var(--spritesheet-size)/8) * var(--pixel-size)));
 }
-.face_down_left, .dl {
+.face_down_left, .southwest {
   top: calc((-6 * (var(--spritesheet-size)/8) * var(--pixel-size)));
 }
-.face_left, .ml {
+.face_left, .west {
   top: calc((-7 * (var(--spritesheet-size)/8) * var(--pixel-size)));
 }
 
+.hidden {
+  display: none;
+}
 .walking {
   animation: walking 1s steps(8) infinite;
 }
