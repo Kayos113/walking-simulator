@@ -4,18 +4,16 @@
 
 .Character-container {
   position: relative;
-  height: calc(var(--pixels) + 15px);
-  width: var(--pixels);
-  background: red;
+  height: calc((var(--pixels) * var(--pixel-size)) + 15px);
+  width: calc(var(--pixels) * var(--pixel-size));
   overflow: hidden;
-
-  background-blend-mode: multiply;
+  margin: 0 auto;
 }
 
 .Character-sprite {
+  width: calc(var(--spritesheet-size) * var(--pixel-size));
   position: absolute;
   left: 0;
-  border: 1px solid black
 }
 
 .face_right {

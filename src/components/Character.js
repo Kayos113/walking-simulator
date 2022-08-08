@@ -7,7 +7,7 @@ function Character(props) {
 
 
   return (
-    <div className="Character-container">
+    <div className="Character-container ">
       <img
         src={character}
         alt="Character"

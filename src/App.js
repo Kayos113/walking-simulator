@@ -7,8 +7,24 @@ function App() {
     <div className="App">
       <h1>Hello World!</h1>
       <Character />
+      <div>
+        <button>↖</button>
+        <button>↑</button>
+        <button>↗</button>
+      </div>
+      <div>
+        <button>←</button>
+        <button>⦿</button>
+        <button>→</button>
+      </div>
+      <div>
+        <button>↙</button>
+        <button>↓</button>
+        <button>↘</button>
+      </div>
     </div>
   );
 }
 
+// ↑ ↓ → ← ↙ ↘ ↗ ↖ ⦿ ●
 export default App;

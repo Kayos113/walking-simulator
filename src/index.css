@@ -1,7 +1,12 @@
 :root {
   --pixels: 128px;
-  --pixel-size: 1;
-}
+  --pixel-size: 2;
+
+  --ch-red: #FF1E00;
+  --ch-blue-white: #E8F9FD;
+  --ch-green: #59CE8F;
+  --ch-black: #000000;
+  }
 
 body {
   margin: 0;
@@ -10,9 +15,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--ch-green);
+  color: var(--ch-red);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.pixelart {
+  image-rendering: pixelated;
 }
