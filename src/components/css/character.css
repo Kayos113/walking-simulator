@@ -1,41 +1,46 @@
-
+:root {
+  --spritesheet-size: 1104px;
+}
 
 .Character-container {
   position: relative;
   height: calc(var(--pixels) + 15px);
   width: var(--pixels);
   background: red;
-  overflow: visible;
+  overflow: hidden;
+
+  background-blend-mode: multiply;
 }
 
 .Character-sprite {
   position: absolute;
   left: 0;
+  border: 1px solid black
 }
 
 .face_right {
   top: 0;
 }
 .face_up {
-  top: calc((-1 * var(--pixels) * var(--pixel-size)));
+  top: calc((-1 * (var(--spritesheet-size)/8) * var(--pixel-size)));
 }
 .face_up_right {
-  top: calc((-2.25 * var(--pixels) * var(--pixel-size)));
+  top: calc((-2 * (var(--spritesheet-size)/8) * var(--pixel-size)));
 }
 .face_up_left {
-  top: calc((-3 * var(--pixels) * var(--pixel-size)));
+  top: calc((-3 * (var(--spritesheet-size)/8) * var(--pixel-size)));
 }
 .face_down {
-  top: calc((-4 * var(--pixels) * var(--pixel-size)) - 80px);
+  top: calc((-4 * (var(--spritesheet-size)/8) * var(--pixel-size)));
 }
 .face_down_right {
-  top: calc((-5 * var(--pixels) * var(--pixel-size)) - 80px);
+  top: calc((-5 * (var(--spritesheet-size)/8) * var(--pixel-size)));
 }
 .face_down_left {
-  top: calc((-6 * var(--pixels) * var(--pixel-size)) - 80px);
+  top: calc((-6 * (var(--spritesheet-size)/8) * var(--pixel-size)));
 }
 .face_left {
-  top: calc((-7 * var(--pixels) * var(--pixel-size)) - 80px);
+  top: calc((-7 * (var(--spritesheet-size)/8) * var(--pixel-size)));
 }
 
 .walking {

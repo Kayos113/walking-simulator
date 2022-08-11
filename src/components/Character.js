@@ -11,7 +11,8 @@ function Character(props) {
       <img
         src={character}
         alt="Character"
-        className="Character-sprite walking face_up_right"
+        className="Character-sprite walking face_right"
+
         />
     </div>
   )
