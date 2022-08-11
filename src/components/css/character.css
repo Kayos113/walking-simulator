@@ -1,0 +1,51 @@
+
+
+.Character-container {
+  position: relative;
+  height: calc(var(--pixels) + 15px);
+  width: var(--pixels);
+  background: red;
+  overflow: visible;
+}
+
+.Character-sprite {
+  position: absolute;
+  left: 0;
+}
+
+.face_right {
+  top: 0;
+}
+.face_up {
+  top: calc((-1 * var(--pixels) * var(--pixel-size)));
+}
+.face_up_right {
+  top: calc((-2.25 * var(--pixels) * var(--pixel-size)));
+}
+.face_up_left {
+  top: calc((-3 * var(--pixels) * var(--pixel-size)));
+}
+.face_down {
+  top: calc((-4 * var(--pixels) * var(--pixel-size)) - 80px);
+}
+.face_down_right {
+  top: calc((-5 * var(--pixels) * var(--pixel-size)) - 80px);
+}
+.face_down_left {
+  top: calc((-6 * var(--pixels) * var(--pixel-size)) - 80px);
+}
+.face_left {
+  top: calc((-7 * var(--pixels) * var(--pixel-size)) - 80px);
+}
+
+.walking {
+  animation: walking 1s steps(8) infinite;
+}
+@keyframes walking {
+  from {
+    transform: translate3d(0px,0,0);
+  }
+  to {
+    transform: translate3d(-100%,0,0);
+  }
+}
