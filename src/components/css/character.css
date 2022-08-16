@@ -16,28 +16,28 @@
   left: 0;
 }
 
-.face_right {
+.face_right, .mr {
   top: 0;
 }
-.face_up {
+.face_up, .um {
   top: calc((-1 * (var(--spritesheet-size)/8) * var(--pixel-size)));
 }
-.face_up_right {
+.face_up_right, .ur {
   top: calc((-2 * (var(--spritesheet-size)/8) * var(--pixel-size)));
 }
-.face_up_left {
+.face_up_left, .ul {
   top: calc((-3 * (var(--spritesheet-size)/8) * var(--pixel-size)));
 }
-.face_down {
+.face_down, .dm {
   top: calc((-4 * (var(--spritesheet-size)/8) * var(--pixel-size)));
 }
-.face_down_right {
+.face_down_right, .dr {
   top: calc((-5 * (var(--spritesheet-size)/8) * var(--pixel-size)));
 }
-.face_down_left {
+.face_down_left, .dl {
   top: calc((-6 * (var(--spritesheet-size)/8) * var(--pixel-size)));
 }
-.face_left {
+.face_left, .ml {
   top: calc((-7 * (var(--spritesheet-size)/8) * var(--pixel-size)));
 }
 

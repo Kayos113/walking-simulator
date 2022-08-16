@@ -1,18 +1,17 @@
-import react, {useState} from "react";
+
 import "./css/character.css";
 import character from "./images/character/Spritesheet Walk.png"
 
 function Character(props) {
 
-
+let classes = "Character-sprite walking " + props.direction;
 
   return (
     <div className="Character-container ">
       <img
         src={character}
         alt="Character"
-        className="Character-sprite walking face_right"
-
+        className={classes}
         />
     </div>
   )
