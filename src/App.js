@@ -7,10 +7,16 @@ function App() {
 
   const [directionFacing, setDirectionFacing] = useState("dm");
   const [walking, setWalking] = useState(true);
+  const [startStop, setStartStop] = useState("■")
   const controlClicked = (event) => {
     let val = event.target.value;
     if(val==="toggle-walk") {
       setWalking(!walking);
+      if(walking) {
+        setStartStop("►");
+      } else {
+        setStartStop("■");
+      }
     } else {
       setDirectionFacing(event.target.value);
     }
@@ -30,7 +36,7 @@ function App() {
         </div>
         <div className="control-row">
           <button onClick={controlClicked} value="west">←</button>
-          <button onClick={controlClicked} value="toggle-walk">⦿</button>
+          <button onClick={controlClicked} value="toggle-walk">{startStop}</button>
           <button onClick={controlClicked} value="east">→</button>
         </div>
         <div className="control-row">
@@ -43,5 +49,5 @@ function App() {
   );
 }
 
-// ↑ ↓ → ← ↙ ↘ ↗ ↖ ⦿ ●
+// ↑ ↓ → ← ↙ ↘ ↗ ↖ ⦿ ● ► ■
 export default App;
