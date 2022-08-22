@@ -12,7 +12,7 @@ function App() {
     let val = event.target.value;
     if(val==="toggle-walk") {
       setWalking(!walking);
-      if(walking) {
+      if(walking) { // check for the negate of walking as the setStartStop won't have finished updating by the time this statement checks it.
         setStartStop("►");
       } else {
         setStartStop("■");

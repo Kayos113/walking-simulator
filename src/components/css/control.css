@@ -1,5 +1,8 @@
 button {
+  display: inline-flex;
   color: var(--ch-blue-white);
+  justify-content: center;
+  align-items: center;
 
   min-width: 3rem;
   min-height: 3rem;
