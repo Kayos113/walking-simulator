@@ -37,3 +37,20 @@
     transform: rotate(360deg);
   }
 }
+
+.viewport {
+  display: block;
+  width: 75vw;
+  height: 50vh;
+  margin: 0 auto;
+  overflow: visible;
+  border: solid 2px var(--ch-red);
+  border-radius: 2rem;
+}
+
+.bg {
+  position: relative;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}

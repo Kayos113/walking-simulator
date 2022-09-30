@@ -7,7 +7,7 @@
   height: calc((var(--pixels) * var(--pixel-size)) + (7.5px*var(--pixel-size)));
   width: calc(var(--pixels) * var(--pixel-size));
   overflow: hidden;
-  margin: 0 auto;
+  margin: 5% auto;
 }
 
 .Character-sprite {
