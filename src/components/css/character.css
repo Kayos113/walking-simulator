@@ -3,11 +3,53 @@
 }
 
 .Character-container {
+  border: solid 2px var(--ch-red);
+  border-radius: 8px;
   position: relative;
   height: calc((var(--pixels) * var(--pixel-size)) + (7.5px*var(--pixel-size)));
   width: calc(var(--pixels) * var(--pixel-size));
   overflow: hidden;
   margin: 5% auto;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 30vw;
+  height: auto;
+}
+.bg-down {
+  animation: bg-down 4s linear infinite;
+}
+.bg-down-right {
+  animation: bg-down-right 4s linear infinite;
+}
+.bg-right {
+  animation: bg-right 4s linear infinite;
+}
+.bg-up-right {
+  animation: bg-up-right 4s linear infinite;
+}
+.bg-up {
+  animation: bg-up 4s linear infinite;
+}
+.bg-up-left {
+  animation: bg-up-left 4s linear infinite;
+}
+.bg-left {
+  animation: bg-left 4s linear infinite;
+}
+.bg-down-left {
+  animation: bg-down-left 4s linear infinite;
+}
+.bg-one {
+}
+.bg-two {
+  animation-delay: 2s;
+  opacity: 0;
+  animation: to-visible 4s linear no-repeat;
 }
 
 .Character-sprite {
@@ -60,5 +102,77 @@
   }
   to {
     transform: translate3d(-100%,0,0);
+  }
+}
+@keyframes bg-down {
+  from {
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+@keyframes bg-down-right {
+  from {
+    transform: translate3d(100%, -100%, 0);
+  }
+  to {
+    transform: translate3d(-100%, 100%, 0);
+  }
+}
+@keyframes bg-right {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+@keyframes bg-up-right {
+  from {
+    transform: translate3d(-100%, 100%, 0);
+  }
+  to {
+    transform: translate3d(100%, -100%, 0);
+  }
+}
+@keyframes bg-up {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+@keyframes bg-up-left {
+  from {
+    transform: translate3d(100%, 100%, 0);
+  }
+  to {
+    transform: translate3d(-100%, -100%, 0);
+  }
+}
+@keyframes bg-left {
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes bg-down-left {
+  from {
+    transform: translate3d(-100%, -100%, 0);
+  }
+  to {
+    transform: translate3d(100%, 100%, 0);
+  }
+}
+@keyframes to-visible {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
