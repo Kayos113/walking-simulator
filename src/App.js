@@ -5,7 +5,6 @@ import './App.css';
 import "./components/css/control.css";
 import Character from "./components/Character";
 import Control from "./components/Control";
-import grassyBG from "./components/images/bg/big-grassy-bg.png";
 
 function App() {
 
@@ -28,13 +27,10 @@ function App() {
 
   return (
     <div className = "App" >
-      <div class = "viewport" >
-        <img src={grassyBG} alt="" class="bg" />
-        <Character
-        direction = {directionFacing}
-        walking = {walking}
-        />
-      </div>
+      <Character
+      direction = {directionFacing}
+      walking = {walking}
+      />
       <Control
       startStop = {startStop}
       controlClicked = {controlClicked}
