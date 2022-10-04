@@ -65,25 +65,25 @@
   top: 0;
 }
 .face_up, .north {
-  top: calc((-1 * (var(--spritesheet-size)/8) * var(--pixel-size)));
+  top: calc(calc(-1 * calc(var(--spritesheet-size)/8) * var(--pixel-size)));
 }
 .face_up_right, .northeast {
-  top: calc((-2 * (var(--spritesheet-size)/8) * var(--pixel-size)));
+  top: calc(calc(-2 * calc(var(--spritesheet-size)/8) * var(--pixel-size)));
 }
 .face_up_left, .northwest {
-  top: calc((-3 * (var(--spritesheet-size)/8) * var(--pixel-size)));
+  top: calc(calc(-3 * calc(var(--spritesheet-size)/8) * var(--pixel-size)));
 }
 .face_down, .south {
-  top: calc((-4 * (var(--spritesheet-size)/8) * var(--pixel-size)));
+  top: calc(calc(-4 * calc(var(--spritesheet-size)/8) * var(--pixel-size)));
 }
 .face_down_right, .southeast {
-  top: calc((-5 * (var(--spritesheet-size)/8) * var(--pixel-size)));
+  top: calc(calc(-5 * calc(var(--spritesheet-size)/8) * var(--pixel-size)));
 }
 .face_down_left, .southwest {
-  top: calc((-6 * (var(--spritesheet-size)/8) * var(--pixel-size)));
+  top: calc(calc(-6 * calc(var(--spritesheet-size)/8) * var(--pixel-size)));
 }
 .face_left, .west {
-  top: calc((-7 * (var(--spritesheet-size)/8) * var(--pixel-size)));
+  top: calc(calc(-7 * calc(var(--spritesheet-size)/8) * var(--pixel-size)));
 }
 
 .hidden {
