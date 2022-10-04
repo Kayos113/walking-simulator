@@ -8,7 +8,7 @@ import Control from "./components/Control";
 
 function App() {
 
-  const [directionFacing, setDirectionFacing] = useState("dm");
+  const [directionFacing, setDirectionFacing] = useState("south");
   const [walking, setWalking] = useState(true);
   const [startStop, setStartStop] = useState("■");
   const controlClicked = (event) => {
