@@ -1,7 +1,7 @@
 :root {
   --pixels: 128px;
   --pixel-size: 2;
-
+  --spritesheet-size: 1104px;
   --ch-red: #FF1E00;
   --ch-blue-white: #E8F9FD;
   --ch-green: #59CE8F;
